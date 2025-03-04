@@ -70,14 +70,15 @@ export default function Bento() {
               />
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-blue-600">
-                  Get it done
+                  Confidence
                 </h3>
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                  Reduce Procedure Duration
+                  Sales Enablement
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-                  Commodity Code operations in a fraction of the time. What used
-                  to take days or weeks now takes minutes.
+                  Enable your sales team to sell with confidence and accuracy
+                  knowing that they are using data that is up to date and
+                  compliant.
                 </p>
               </div>
             </div>
@@ -115,7 +116,9 @@ export default function Bento() {
                 className="h-80 object-cover"
               />
               <div className="p-10 pt-4">
-                <h3 className="text-sm/4 font-semibold text-blue-600">No sweat</h3>
+                <h3 className="text-sm/4 font-semibold text-blue-600">
+                  No sweat
+                </h3>
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
                   Real-Time Compliance
                 </p>
@@ -137,14 +140,14 @@ export default function Bento() {
               />
               <div className="p-10 pt-4">
                 <h3 className="text-sm/4 font-semibold text-blue-600">
-                  Got your back
+                  Smooth Sailing
                 </h3>
                 <p className="mt-2 text-lg font-medium tracking-tight text-gray-950">
-                  AI-driven Knowledge-Hub & support
+                  Operational Streamlining
                 </p>
                 <p className="mt-2 max-w-lg text-sm/6 text-gray-600">
-                  Get instant guidance on complex classifications with our AI
-                  chatbot and knowledge hub.
+                  Optimize your business processes, receive instant guidance on
+                  complex classifications and save weeks of work at a time.
                 </p>
               </div>
             </div>
