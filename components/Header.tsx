@@ -68,7 +68,7 @@ export default function Header() {
                         {/* Solutions Mega Menu */}
                         <MegaMenu
                             buttonText="Solutions"
-                            mainItems={solutions}
+                            navigation={solutions}
                             callsToAction={callsToAction}
                         />
 

@@ -5,34 +5,34 @@ import FAQItem from "./FAQItem";
 
 const faqs = [
     {
-        question: "What's the best thing about Switzerland?",
+        question: "What is an AI-powered commodity code classifier?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "Our classifier uses advanced AI to instantly analyze product descriptions and assign accurate HS/HTS codes, continuously learning from global trade data and customs rulings to eliminate manual research.",
     },
     {
-        question: "What's the best thing about Switzerland?",
+        question: "How accurate is your commodity code classifier?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "Our AI classifier achieves accuracy rates exceeding 99.5%, virtually eliminating misclassifications while providing confidence scores for complete transparency in edge cases.",
     },
     {
-        question: "What's the best thing about Switzerland?",
+        question: "Can it integrate with our existing systems?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "Yes, with REST APIs, pre-built connectors for major platforms (Shopify, Magento, SAP), and batch processing capabilities, integration typically takes just days.",
     },
     {
-        question: "What's the best thing about Switzerland?",
+        question: "How does it handle new or unique products?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "The system analyzes product characteristics, components, and intended use beyond keyword matching, effectively classifying novel items and providing alternative options when needed.",
     },
     {
-        question: "What's the best thing about Switzerland?",
+        question: "What if classifications are challenged by customs?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "Each classification comes with supporting rationale documentation. Enterprise customers receive our classification guarantee with direct support for any customs inquiries.",
     },
     {
-        question: "What's the best thing about Switzerland?",
+        question: "What's the business impact?",
         answer:
-            "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            "Classification time drops from minutes to seconds per product, reducing staff needs by 80%, eliminating customs delays, and optimizing duty payments. Most customers see ROI within 3 months.",
     },
 ];
 
@@ -40,25 +40,31 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <div className="bg-white">
-            <div className="mx-auto max-w-7xl px-6 py-24 sm:pb-32 lg:px-8 lg:pb-40">
+        <section className="py-16">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-4xl">
-                    <h2 className="text-6xl font-semibold tracking-tight text-gray-900">
-                        Frequently asked questions
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-900 dark:text-blue-100 text-center">
+                        Frequently Asked Questions
                     </h2>
-                    <dl className="mt-16 divide-y divide-gray-900/10">
-                        {faqs.map((faq, i) => (
-                            <FAQItem
-                                key={faq.question + i}
-                                i={i}
-                                setOpenIndex={setOpenIndex}
-                                isOpen={openIndex === i}
-                                faq={faq}
-                            />
-                        ))}
-                    </dl>
+                    <p className="text-lg text-blue-700 dark:text-blue-300 max-w-2xl mx-auto mb-12 text-center">
+                        Everything you need to know about our platform and services
+                    </p>
+                    
+                    <div className="mt-10 rounded-2xl bg-white dark:bg-blue-900/20 shadow-xl dark:shadow-blue-900/10 p-6 md:p-8">
+                        <dl className="divide-y divide-blue-100 dark:divide-blue-800/30">
+                            {faqs.map((faq, i) => (
+                                <FAQItem
+                                    key={faq.question + i}
+                                    i={i}
+                                    setOpenIndex={setOpenIndex}
+                                    isOpen={openIndex === i}
+                                    faq={faq}
+                                />
+                            ))}
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

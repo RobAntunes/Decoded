@@ -33,7 +33,6 @@ export default function HeroTwoColumnSkewed() {
                                     </div>
                                 </div>
                                 <div>
-
                                     <h1 className="text-6xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl">
                                         AI for Global Trade
                                     </h1>
@@ -41,7 +40,12 @@ export default function HeroTwoColumnSkewed() {
                                 <div className="w-full items-end">
                                     <div>
                                         <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                            Smart AI for seamless trade—automate customs, tariffs, excise, and compliance while optimizing classifications and reducing costs worldwide.
+                                            AI-powered trade engine—fueling
+                                            e-commerce growth while creating
+                                            breakthrough enterprise efficiencies
+                                            with smart systems that transform
+                                            international logistics into revenue
+                                            multipliers.
                                         </p>
                                         <div className="mt-10  w-full flex items-center gap-x-6">
                                             <Button
@@ -53,7 +57,7 @@ export default function HeroTwoColumnSkewed() {
                                                 className="mt-8 py-3.5"
                                             >
                                                 <Link href="/get-started/pricing">
-                                                    <p>Get started for free!</p>
+                                                    <p>Get started</p>
                                                 </Link>
                                             </Button>
                                         </div>
@@ -61,7 +65,11 @@ export default function HeroTwoColumnSkewed() {
                                 </div>
                             </div>
                             <div className="bg-gray-50 rounded-xl w-[700px] overflow-hidden flex justify-center items-center relative">
-                                <NextVideoPlayer autoplay playbackId="wstLkZnzpGhQtlvwzCk5aBy2hP4zdIW2cCGnw2GxPb4" className="w-full h-full relative" />
+                                <NextVideoPlayer
+                                    autoplay
+                                    playbackId="wstLkZnzpGhQtlvwzCk5aBy2hP4zdIW2cCGnw2GxPb4"
+                                    className="w-full h-full relative"
+                                />
                             </div>
                         </div>
                     </div>

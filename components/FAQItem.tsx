@@ -1,13 +1,8 @@
 "use client";
 
-import {
-    Disclosure,
-    DisclosureButton,
-    DisclosurePanel,
-    Transition
-} from "@headlessui/react";
-import { Minus, Plus } from "lucide-react";
 import { Dispatch, SetStateAction } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronDown } from "react-icons/fa";
 
 interface FAQItemProps {
     i: number;
@@ -17,49 +12,47 @@ interface FAQItemProps {
 }
 
 const FAQItem = ({ i, faq, isOpen, setOpenIndex }: FAQItemProps) => {
+    const toggleOpen = () => {
+        setOpenIndex(isOpen ? null : i);
+    };
+
     return (
-        <Disclosure
-            as="div"
-            className="py-6 first:pt-0 last:pb-0"
-            defaultOpen={isOpen}
-            onChange={() => setOpenIndex(isOpen ? null : i)}
-        >
-            {({ open }) => (
-                <>
-                    <dt>
-                        <DisclosureButton
-                            className="group flex w-full items-start justify-between text-left text-gray-900"
-                        >
-                            <span className="text-base font-semibold leading-7">
-                                {faq.question}
-                            </span>
-                            <span className="ml-6 flex h-7 items-center">
-                                {open ? (
-                                    <Minus className="h-6 w-6" aria-hidden="true" />
-                                ) : (
-                                    <Plus className="h-6 w-6" aria-hidden="true" />
-                                )}
-                            </span>
-                        </DisclosureButton>
-                    </dt>
-                    <Transition
-                        show={open}
-                        enter="transition-all duration-300 ease-out"
-                        enterFrom="max-h-0 opacity-0"
-                        enterTo="max-h-96 opacity-100"
-                        leave="transition-all duration-200 ease-in"
-                        leaveFrom="max-h-96 opacity-100"
-                        leaveTo="max-h-0 opacity-0"
+        <div className="py-5 group">
+            <dt>
+                <button
+                    onClick={toggleOpen}
+                    className="flex w-full items-center justify-between text-left focus:outline-none focus:ring-0"
+                >
+                    <span className="font-semibold text-2xl text-blue-800 dark:text-blue-200 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-200">
+                        {faq.question}
+                    </span>
+                    <motion.span 
+                        className="ml-6 flex-shrink-0 text-blue-500 dark:text-blue-400"
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                        <DisclosurePanel static as="dd" className="mt-2 pr-12 transition-all">
-                            <p className="text-base leading-7 text-gray-600 transition-all duration-500">
+                        <FaChevronDown className="h-5 w-5" aria-hidden="true" />
+                    </motion.span>
+                </button>
+            </dt>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.dd 
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                    >
+                        <div className="mt-4 bg-blue-50/50 dark:bg-blue-900/10 p-4 rounded-lg">
+                            <p className="text-blue-700 dark:text-blue-300">
                                 {faq.answer}
                             </p>
-                        </DisclosurePanel>
-                    </Transition>
-                </>
-            )}
-        </Disclosure>
+                        </div>
+                    </motion.dd>
+                )}
+            </AnimatePresence>
+        </div>
     );
 };
 

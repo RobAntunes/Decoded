@@ -14,7 +14,6 @@ export default function Home() {
       <Bento />
       <CTA1 />
       <HiW />
-      {/* <Dominoes /> */}
       <Stats />
       <StylishCarousel />
       <FAQ />
