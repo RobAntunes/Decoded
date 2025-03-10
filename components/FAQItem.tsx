@@ -23,7 +23,7 @@ const FAQItem = ({ i, faq, isOpen, setOpenIndex }: FAQItemProps) => {
                     onClick={toggleOpen}
                     className="flex w-full items-center justify-between text-left focus:outline-none focus:ring-0"
                 >
-                    <span className="font-semibold text-2xl text-blue-800 dark:text-blue-200 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-200">
+                    <span className="font-semibold text-xl text-blue-800 dark:text-blue-200 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-200">
                         {faq.question}
                     </span>
                     <motion.span 
