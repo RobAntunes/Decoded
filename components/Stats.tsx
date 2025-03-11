@@ -18,7 +18,7 @@ const stats = [
     { id: 3, name: "Reduction in average duty payments", value: "12.3%" },
     {
         id: 4,
-        name: "In untapped earnings through cross and up sells",
+        name: "In untapped sales opportunities",
         value: "$66 Billion",
     },
 ];

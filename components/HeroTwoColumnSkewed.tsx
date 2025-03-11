@@ -67,7 +67,7 @@ export default function HeroTwoColumnSkewed() {
                             <div className="bg-gray-50 rounded-xl w-[700px] overflow-hidden flex justify-center items-center relative">
                                 <NextVideoPlayer
                                     autoplay
-                                    playbackId="wstLkZnzpGhQtlvwzCk5aBy2hP4zdIW2cCGnw2GxPb4"
+                                    playbackId="01hfIDB95BuF4xdoix0216Gd67O01D36f8b9UThWDghSOQ"
                                     className="w-full h-full relative"
                                 />
                             </div>
