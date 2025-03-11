@@ -13,7 +13,7 @@ import {
 import { INavigation } from "@/types/navigation";
 
 export const solutions: INavigation = {
-  "ecommerce": [
+  "eCommerce": [
     {
       name: "Decoded",
       description:
@@ -35,7 +35,7 @@ export const solutions: INavigation = {
       icon: ChartBarIcon,
     },
   ],
-  enterprise: [
+  Enterprise: [
     {
       name: "Decoded",
       description: "Large-scale, enterprise grade, AI powered classification of goods",

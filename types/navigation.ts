@@ -1,7 +1,7 @@
 // types/navigation.ts
 import { ElementType } from 'react';
 
-export type MenuSectionType = "ecommerce" | "enterprise" | "government";
+export type MenuSectionType = "eCommerce" | "Enterprise" | "Government";
 
 export type INavigation = {
   [key in MenuSectionType]?: MenuItem[]

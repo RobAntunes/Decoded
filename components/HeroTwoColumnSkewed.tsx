@@ -41,7 +41,7 @@ export default function HeroTwoColumnSkewed() {
                                     <div>
                                         <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
                                             AI-powered trade engine—fueling
-                                            e-commerce growth while creating
+                                            eCommerce growth while creating
                                             breakthrough enterprise efficiencies
                                             with smart systems that transform
                                             international logistics into revenue

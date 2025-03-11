@@ -63,7 +63,7 @@ export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMega
                       <div className="grid grid-cols-2 gap-y-4">
                         {keys.map((key) => (
                           <div key={key}>
-                            <h3 className="text-xl text-blue-600 font-semiboldrounded-lg w-[40%] flex justify-center">{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                            <h3 className="text-xl text-blue-600 font-semiboldrounded-lg w-[40%] flex justify-center">{key}</h3>
                             <div className="mt-4 space-y-4">
                               {navigation[key as MenuSectionType]?.map((item) => (
                                 <MegaMenuItem key={item.name} item={item} />
