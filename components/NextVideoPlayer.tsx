@@ -10,17 +10,30 @@ interface NextVideoProps {
   className?: string;
 }
 
+// Simple spinner component
+const VideoSkeleton = () => (
+  <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 rounded-xl flex items-center justify-center">
+    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
+
 export default function NextVideo({ autoplay, playbackId, className }: NextVideoProps) {
   const videoRef = useRef<HTMLElement>(null);
   const playerRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [sound, setSound] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (playerRef.current) {
       playerRef.current.muted = !sound;
     }
   }, [sound]);
+
+  // Handle video loaded event
+  const handleVideoLoad = () => {
+    setIsLoading(false);
+  };
 
   return (
     <section
@@ -36,9 +49,9 @@ export default function NextVideo({ autoplay, playbackId, className }: NextVideo
         `}
       >
         <div className="w-full h-full z-50 overflow-hidden rounded-xl relative shadow-3xl drop-shadow-2xl">
+          {isLoading && <VideoSkeleton />}
           <SoundButton sound={sound} setSound={setSound} />
           <Player
-          controls={false}
             ref={playerRef}
             title="Next"
             playbackId={playbackId}
@@ -46,6 +59,8 @@ export default function NextVideo({ autoplay, playbackId, className }: NextVideo
             loop
             className="z-50"
             muted={!sound}
+            controls={false}
+            onLoadedData={handleVideoLoad}
           />
         </div>
       </div>
