@@ -60,7 +60,7 @@ export const SoundButton = memo(({ sound, setSound }: { sound: boolean, setSound
   };
 
   return (
-    <div className="group absolute top-10 left-10 flex items-center">
+    <div className="group absolute top-2 left-2 flex items-center">
       <div className="z-[9991] flex items-center relative hover:bg-white bg-white/20 backdrop-blur-xl rounded-full w-[72px] h-[72px] transition-all duration-300 ease-in-out group-hover:w-40">
         <button
           className="absolute left-[8px] p-4 bg-white/90 rounded-full transition-all duration-300 ease-in-out flex items-center justify-center"

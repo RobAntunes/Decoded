@@ -87,7 +87,7 @@ export function Hero() {
       <NextVideoPlayer
         className="mx-auto !w-[1200px] py-24 rounded-xl"
         autoplay
-        playbackId="01hfIDB95BuF4xdoix0216Gd67O01D36f8b9UThWDghSOQ"
+        playbackId="CmW402WaE9P00ep6pGDXL00C3DCO4n01HmAvV2wBHqjC00mc"
       />
     </div>
   );

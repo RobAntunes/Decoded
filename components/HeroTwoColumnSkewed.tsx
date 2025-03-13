@@ -25,9 +25,9 @@ export default function HeroTwoColumnSkewed() {
                                 <div className="w-full items-end">
                                     <div>
                                         <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                            AI that transforms
-                                            international trade into revenue
-                                            growth.
+                                            AI that transforms international
+                                            trade into revenue growth for
+                                            eCommerce and enterprise.
                                         </p>
                                         <div className="mt-10  w-full flex items-center gap-x-6">
                                             <Button
@@ -49,7 +49,7 @@ export default function HeroTwoColumnSkewed() {
                             <div className="bg-gray-50 rounded-xl w-[400px] relative">
                                 <NextVideoPlayer
                                     autoplay
-                                    playbackId="01hfIDB95BuF4xdoix0216Gd67O01D36f8b9UThWDghSOQ"
+                                    playbackId="CmW402WaE9P00ep6pGDXL00C3DCO4n01HmAvV2wBHqjC00mc"
                                     className="w-full h-full relative"
                                 />
                             </div>
