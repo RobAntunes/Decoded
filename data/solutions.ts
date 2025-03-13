@@ -44,7 +44,7 @@ export const solutions: INavigation = {
         name: "Decoded",
         description:
           "Large-scale, enterprise grade, AI powered classification of goods",
-        href: "/solutions/enterprise/decoded",
+        href: "/solutions/ecommerce/decoded",
         icon: BuildingOfficeIcon,
       },
       {
