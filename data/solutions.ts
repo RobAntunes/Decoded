@@ -5,7 +5,6 @@ import {
   CurrencyDollarIcon,
   DocumentMagnifyingGlassIcon,
   PhoneIcon,
-  PlayCircleIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import { INavigation } from "@/types/navigation";
@@ -61,17 +60,12 @@ export const solutions: INavigation = {
 
 export const callsToAction = [
   {
-    name: "Schedule Demo",
-    href: "/demo",
-    icon: PlayCircleIcon,
-  },
-  {
-    name: "Talk to Expert",
+    name: "Contact",
     href: "/contact",
     icon: PhoneIcon,
   },
   {
-    name: "View Pricing",
+    name: "Pricing",
     href: "/pricing",
     icon: CurrencyDollarIcon,
   },

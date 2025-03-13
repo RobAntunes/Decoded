@@ -25,8 +25,8 @@ export default function HeroTwoColumnSkewed() {
                                 <div className="w-full items-end">
                                     <div>
                                         <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                            AI-powered that transforms
-                                            internation trade into revenue
+                                            AI that transforms
+                                            international trade into revenue
                                             growth.
                                         </p>
                                         <div className="mt-10  w-full flex items-center gap-x-6">

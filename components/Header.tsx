@@ -9,10 +9,10 @@ import { MegaMenu } from "@/components/Megamenu";
 import { callsToAction, solutions } from "@/data/solutions";
 
 const navigation = [
-    { name: "Product", href: "#" },
-    { name: "Features", href: "#" },
-    { name: "Marketplace", href: "#" },
-    { name: "Company", href: "#" },
+    { name: "About", href: "/about" },
+    { name: "Features", href: "/features" },
+    { name: "Pricing", href: "/get-started/pricing" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
