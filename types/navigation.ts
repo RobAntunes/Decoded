@@ -1,11 +1,11 @@
 // types/navigation.ts
-import { ElementType } from 'react';
+import { ElementType } from "react";
 
 export type MenuSectionType = "eCommerce" | "Enterprise" | "Government";
 
 export type INavigation = {
-  [key in MenuSectionType]?: MenuItem[]
-}
+  [key in MenuSectionType]?: {link: string, items: MenuItem[]};
+};
 
 export interface MenuItem {
   name: string;

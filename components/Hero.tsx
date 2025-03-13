@@ -3,6 +3,7 @@
 import { CaretRight } from "@phosphor-icons/react";
 import Button from "./Button";
 import NextVideoPlayer from "./NextVideoPlayer";
+import Badge from "./Badge";
 
 export function Hero() {
   return (
@@ -51,10 +52,7 @@ export function Hero() {
       }
 
       <div className="flex flex-col flex-grow justify-start items-center pt-60">
-        <span className="group text-[16px] hover:cursor-pointer items-center mb-4 inline-flex rounded-md bg-blue-50 px-[20px] py-[9px] text-xs font-bold text-blue-700">
-          {"The  #1 platform in AI for business".toUpperCase()}
-        </span>
-
+        <Badge text="The  #1 platform in AI for business" />
         <h1 className="font-semibold mx-auto max-w-6xl font-display text-5xl font-urbanist tracking-tight text-slate-800 sm:text-7xl">
           Commodity Codes,{" "}
           <span className="font-bold relative whitespace-nowrap text-blue-600">
