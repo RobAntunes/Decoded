@@ -17,10 +17,15 @@ export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMega
   const buttonRef = useRef<HTMLButtonElement>(null);
   const businessTypes: BusinessType[] = ["Enterprise", "eCommerce"];
   
-  const featureTabs = [
+  const ecommerceFeatureTabs = [
     { id: 'commodity-codes', name: 'Commodity Codes' },
     { id: 'landed-cost', name: 'Landed Cost Calculator' },
     { id: 'growth-engine', name: 'Business Growth Engine' }
+  ];
+
+  const enterpriseFeatureTabs = [
+    { id: 'commodity-codes', name: 'Commodity Codes' },
+    { id: 'sourcing-optimizer', name: 'Sourcing Optimizer' },
   ];
   
   // Filter to show only Decoded
@@ -51,6 +56,11 @@ export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMega
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
+  // Function to get the appropriate feature tabs based on business type
+  const getFeatureTabsForType = (type: BusinessType) => {
+    return type === "eCommerce" ? ecommerceFeatureTabs : enterpriseFeatureTabs;
+  };
 
   return (
     <Headless.Popover className="relative">
@@ -106,51 +116,56 @@ export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMega
                             {/* Right side: Features and Content */}
                             <div className="w-3/4 pl-6">
                               <Tab.Panels>
-                                {businessTypes.map(type => (
-                                  <Tab.Panel key={type} className="focus:outline-none">
-                                    <h4 className="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Features</h4>
-                                    <Tab.Group>
-                                      <Tab.List className="flex flex-col space-y-1">
-                                        {featureTabs.map(tab => (
-                                          <Tab
-                                            key={tab.id}
-                                            className={({ selected }) =>
-                                              `py-2 px-3 text-left rounded-md focus:outline-none transition-colors ${
-                                                selected
-                                                  ? 'bg-gray-100 text-gray-900 font-medium border-l-4 border-gray-400'
-                                                  : 'text-gray-700 hover:bg-gray-50 border-l-4 border-transparent'
-                                              }`
-                                            }
-                                          >
-                                            {tab.name}
-                                          </Tab>
-                                        ))}
-                                      </Tab.List>
-                                      
-                                      <Tab.Panels className="mt-4 bg-gray-50 rounded-lg border p-4">
-                                        {featureTabs.map(tab => (
-                                          <Tab.Panel key={tab.id} className="focus:outline-none">
-                                            <h5 className="text-sm font-semibold text-gray-900 mb-2">
-                                              {decodedProduct.name}: {tab.name} for {type}
-                                            </h5>
-                                            <p className="text-sm text-gray-600 mb-3">
-                                              {decodedProduct.businessTypes[type]?.description || decodedProduct.description}
-                                            </p>
-                                            <a 
-                                              href={decodedProduct.businessTypes[type]?.href || decodedProduct.href} 
-                                              className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
+                                {businessTypes.map(type => {
+                                  // Get the appropriate feature tabs for this business type
+                                  const featureTabs = getFeatureTabsForType(type);
+                                  
+                                  return (
+                                    <Tab.Panel key={type} className="focus:outline-none">
+                                      <h4 className="text-sm font-medium text-gray-500 mb-3 uppercase tracking-wider">Features</h4>
+                                      <Tab.Group>
+                                        <Tab.List className="flex flex-col space-y-1">
+                                          {featureTabs.map((tab) => (
+                                            <Tab
+                                              key={tab.id}
+                                              className={({ selected }) =>
+                                                `py-2 px-3 text-left rounded-md focus:outline-none transition-colors ${
+                                                  selected
+                                                    ? 'bg-gray-100 text-gray-900 font-medium border-l-4 border-gray-400'
+                                                    : 'text-gray-700 hover:bg-gray-50 border-l-4 border-transparent'
+                                                }`
+                                              }
                                             >
-                                              Learn more
-                                              <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                              </svg>
-                                            </a>
-                                          </Tab.Panel>
-                                        ))}
-                                      </Tab.Panels>
-                                    </Tab.Group>
-                                  </Tab.Panel>
-                                ))}
+                                              {tab.name}
+                                            </Tab>
+                                          ))}
+                                        </Tab.List>
+                                        
+                                        <Tab.Panels className="mt-4 bg-gray-50 rounded-lg border p-4">
+                                          {featureTabs.map((tab) => (
+                                            <Tab.Panel key={tab.id} className="focus:outline-none">
+                                              <h5 className="text-sm font-semibold text-gray-900 mb-2">
+                                                {decodedProduct.name}: {tab.name}
+                                              </h5>
+                                              <p className="text-sm text-gray-600 mb-3">
+                                                {decodedProduct.businessTypes[type]?.description || decodedProduct.description}
+                                              </p>
+                                              <a 
+                                                href={decodedProduct.businessTypes[type]?.href || decodedProduct.href} 
+                                                className="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800"
+                                              >
+                                                Learn more
+                                                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                              </a>
+                                            </Tab.Panel>
+                                          ))}
+                                        </Tab.Panels>
+                                      </Tab.Group>
+                                    </Tab.Panel>
+                                  );
+                                })}
                               </Tab.Panels>
                             </div>
                           </div>

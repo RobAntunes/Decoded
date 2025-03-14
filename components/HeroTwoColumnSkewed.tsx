@@ -49,7 +49,7 @@ export default function HeroTwoColumnSkewed() {
                             <div className="bg-gray-50 rounded-xl w-[650px] relative left-4">
                                 <NextVideoPlayer
                                     autoplay
-                                    playbackId="CmW402WaE9P00ep6pGDXL00C3DCO4n01HmAvV2wBHqjC00mc"
+                                    playbackId="6J6TztLeelers14vfGKte9opSY301wgX5R01WItEekVDs"
                                     className="w-full h-full relative"
                                 />
                             </div>

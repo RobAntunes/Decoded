@@ -52,7 +52,7 @@ export function Hero() {
       }
 
       <div className="flex flex-col flex-grow justify-start items-center pt-60">
-        <Badge text="" />
+        <Badge text="Optimize your supply chain" />
         <h1 className="font-semibold mx-auto max-w-6xl font-display text-5xl font-urbanist tracking-tight text-slate-800 sm:text-7xl">
           Commodity Codes,{" "}
           <span className="font-bold relative whitespace-nowrap text-blue-600">
@@ -87,7 +87,7 @@ export function Hero() {
       <NextVideoPlayer
         className="mx-auto !w-[1200px] py-24 rounded-xl"
         autoplay
-        playbackId="CmW402WaE9P00ep6pGDXL00C3DCO4n01HmAvV2wBHqjC00mc"
+        playbackId="6J6TztLeelers14vfGKte9opSY301wgX5R01WItEekVDs"
       />
     </div>
   );
