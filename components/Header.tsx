@@ -86,7 +86,7 @@ export default function Header() {
                 </div>
 
                 {/* Right side buttons/actions */}
-                <div className="relative z-10 flex items-center gap-x-6">
+                <div className="relative z-10 flex items-center h-full gap-x-6">
                     <Button
                     className="py-3"
                         variant="primary"

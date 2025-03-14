@@ -14,8 +14,8 @@ export default function HeroTwoColumnSkewed() {
                     <div className="items-end justify-around z-10 lg:w-full gap-12">
                         <div className="h-[100vh] relative flex items-center gap-12">
                             <div className="max-w-2xl flex flex-col">
-                                <div className="hidden sm:mb-10 sm:flex">
-                                    <Badge text="Drive your business growth" />
+                                <div className="hidden sm:mb-2 sm:flex">
+                                    <Badge text="The #1 platform in AI for global trade" />
                                 </div>
                                 <div>
                                     <h1 className="!text-[68px] font-semibold tracking-tight text-gray-900 sm:text-7xl">

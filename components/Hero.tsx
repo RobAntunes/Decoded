@@ -52,7 +52,7 @@ export function Hero() {
       }
 
       <div className="flex flex-col flex-grow justify-start items-center pt-60">
-        <Badge text="The  #1 platform in AI for business" />
+        <Badge text="" />
         <h1 className="font-semibold mx-auto max-w-6xl font-display text-5xl font-urbanist tracking-tight text-slate-800 sm:text-7xl">
           Commodity Codes,{" "}
           <span className="font-bold relative whitespace-nowrap text-blue-600">
