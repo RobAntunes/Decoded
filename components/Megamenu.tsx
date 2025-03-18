@@ -15,7 +15,7 @@ interface ExtendedMegaMenuProps {
 export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMegaMenuProps) {  
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const businessTypes: BusinessType[] = ["Enterprise", "eCommerce"];
+  const businessTypes: BusinessType[] = ["eCommerce", "Enterprise"];
   
   const ecommerceFeatureTabs = [
     { id: 'commodity-codes', name: 'Commodity Codes' },
