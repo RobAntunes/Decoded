@@ -26,6 +26,7 @@ export function MegaMenu({ buttonText, navigation, callsToAction }: ExtendedMega
   const enterpriseFeatureTabs = [
     { id: 'commodity-codes', name: 'Commodity Codes' },
     { id: 'sourcing-optimizer', name: 'Sourcing Optimizer' },
+    { id: 'enterprise-analytics', name: 'Enterprise Analytics' }
   ];
   
   // Filter to show only Decoded
