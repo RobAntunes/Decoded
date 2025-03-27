@@ -17,7 +17,7 @@ const How = () => {
         {
             title: "Connect",
             description:
-                "Sign up for an account and connect your data sources.",
+                "Connect your data sources or upload directly from your device.",
             img: upload,
         },
         {
@@ -29,7 +29,7 @@ const How = () => {
         {
             title: "Optimize",
             description:
-                "Use the insights to make informed business decisions.",
+                "Make data-driven, informed business decisions.",
             img: upload,
         },
     ];
@@ -123,22 +123,19 @@ const How = () => {
                             </div>
                         ))}
                     </div>
-                    
+                    <div className="w-full flex justify-center mt-8 font-normal">
+                        <p className="text-white text-[24px]">
+                            {steps[step].description}
+                        </p>
+                    </div>
+
                     {/* Current step image */}
-                    <div className="w-full p-8 flex mt-12 text-xl font-urbanist">
+                    <div className="w-full p-8 flex text-xl font-urbanist">
                         <Image
                             src={steps[step].img}
                             alt={steps[step].title}
                             className="w-[42%] h-auto shadow-2xl rounded-[60px] mr-12"
                         />
-                        <div className="w-[60%]">
-                            <h3 className="text-4xl font-bold text-white">
-                                {steps[step].title}
-                            </h3>
-                            <p className="text-white text-[16px]">
-                                {steps[step].description}
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
