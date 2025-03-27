@@ -125,17 +125,17 @@ const How = () => {
                     </div>
                     
                     {/* Current step image */}
-                    <div className="w-full bg-[#E8E8E8] p-8 flex mt-12 text-xl rounded-lg shadow-2xl font-urbanist">
+                    <div className="w-full bg-white p-8 flex mt-12 text-xl rounded-3xl shadow-2xl font-urbanist border-2 border-grey-600">
                         <Image
                             src={steps[step].img}
                             alt={steps[step].title}
-                            className="w-[42%] h-auto"
+                            className="w-[42%] h-auto shadow-2xl rounded-[60px] mr-12"
                         />
                         <div className="w-[60%]">
                             <h3 className="text-4xl font-bold">
                                 {steps[step].title}
                             </h3>
-                            <p className="text-gray-500">
+                            <p className="text-gray-500 text-[16px]">
                                 {steps[step].description}
                             </p>
                         </div>

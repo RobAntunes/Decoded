@@ -8,8 +8,8 @@ interface MegaMenuCTAProps {
 export function MegaMenuCTA({ items }: MegaMenuCTAProps) {
     return (
         <div className="bg-gray-50">
-            <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 divide-y divide-gray-900/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0 sm:border-x sm:border-gray-900/5">
+            <div className="mx-auto max-w-7xl">
+                <div className="grid grid-cols-1 divide-y divide-gray-900/5 sm:grid-cols-2 sm:divide-x sm:divide-y-0 sm:border-x sm:border-gray-900/5">
                     {items.map((item) => (
                         <Link
                             key={item.name}

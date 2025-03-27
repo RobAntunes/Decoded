@@ -37,11 +37,16 @@ export function MegaMenu(
         {
           id: "landed-cost",
           name: "Landed Cost Calculator",
+          description:
+            "Calculate costs including duties, taxes, and fees for accurate landed cost estimation.",
+
           type: "eCommerce",
         },
         {
           id: "growth-engine",
           name: "Business Growth Engine",
+          description:
+            "Insights and tools to identify expansion opportunities and accelerate business growth.",
           type: "eCommerce",
         },
       ],
@@ -51,18 +56,19 @@ export function MegaMenu(
         {
           id: "commodity-codes",
           name: "Commodity Codes",
-          description:
-            "Calculate complete import costs including duties, taxes, and fees for accurate landed cost estimation.",
+          description: "",
           type: "Enterprise",
         },
         {
           id: "sourcing-optimizer",
           name: "Sourcing Optimizer",
+          description: "",
           type: "Enterprise",
         },
         {
           id: "enterprise-analytics",
           name: "Enterprise Analytics",
+          description: "",
           type: "Enterprise",
         },
       ],
@@ -127,8 +133,21 @@ export function MegaMenu(
                         <div className="tree-menu">
                           {/* Product Title with Icon */}
                           <div className="flex items-center border-b pb-4 mb-4">
-                            <h3 className="text-xl font-medium text-gray-900">
-                              {nav.products.map((product) => product.name)}
+                            <h3 className="text-xl font-medium text-blue-600">
+                              {nav.products.reduce<string[]>((acc, product) => {
+                                if (acc.includes(product.name)) {
+                                  return acc;
+                                } else {
+                                  acc.push(product.name);
+                                  return acc;
+                                }
+                              }, []).map((product, i) => {
+                                return (
+                                  <div key={i}>
+                                    {product}
+                                  </div>
+                                );
+                              })}
                             </h3>
                           </div>
 
@@ -159,28 +178,29 @@ export function MegaMenu(
 
                               {/* Right side: Features and Content */}
                               <div className="w-3/4 pl-6">
+                                <h3 className="mb-3 font-semibold">Modules</h3>
                                 <Tab.Panels>
-                                  {nav.products.map((product, i) => {
-                                    return (
-                                      <Tab.List key={i}>
-                                        <Tab.Panel>
+                                  <Tab.List >
+                                    {nav.products.map((product, i) => {
+                                      return (
+                                        <Tab.Panel key={i}>
                                           <div className="flex flex-col space-y-4">
                                             {product.features
                                               .map((el, j) => {
                                                 return (
                                                   <div key={j}>
                                                     <Link
-                                                      className="block py-2 px-3 text-gray-700 hover:bg-gray-100 bg-gray-100 rounded-md border-l-4 border-gray-500"
+                                                      className="block py-2 px-3 font-semibold text-gray-700 hover:bg-gray-200 group bg-gray-100 rounded-md border-l-4 border-gray-500"
                                                       href={`/solutions/${product.name.toLowerCase()}/${el.type.toLowerCase()}/${el.id}`}
                                                     >
                                                       <div className="flex items-center justify-between">
-                                                        <p className="mb-1">
+                                                        <p className="mb-1 group-hover:text-blue-600">
                                                           {el.name}
                                                         </p>
-                                                        <ChevronRightIcon className="w-5 h-5 inline-block" />
+                                                        <ChevronRightIcon className="w-5 h-5 inline-block group-hover:text-blue-600" />
                                                       </div>
-                                                      <p className="text-sm text-gray-500">
-                                                        {el.description}
+                                                      <p className="text-sm text-gray-500 font-normal">
+                                                        {el.description ?? ""}
                                                       </p>
                                                     </Link>
                                                   </div>
@@ -188,9 +208,9 @@ export function MegaMenu(
                                               })}
                                           </div>
                                         </Tab.Panel>
-                                      </Tab.List>
-                                    );
-                                  })}
+                                      );
+                                    })}
+                                    </Tab.List>
                                 </Tab.Panels>
                               </div>
                             </div>
